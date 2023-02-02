@@ -10,7 +10,7 @@ def receive(sock):
     # Receive/respond loop
     global addr
     while True:
-        print('\nwaiting to receive message')
+       
         data, address = sock.recvfrom(1024)
         address_lock.acquire()
         addr = address
@@ -57,8 +57,8 @@ def main():
     t1.start()
 
     t2.start()
-    t1.join()
     t2.join()
+    t1.join()
 
 
 if __name__ == '__main__':
