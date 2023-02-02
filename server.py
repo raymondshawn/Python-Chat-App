@@ -10,7 +10,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Set a timeout so the socket does not block indefinitely when trying
 # to receive data.
-# sock.settimeout(15)
+sock.settimeout(30)
 
 try:
 
